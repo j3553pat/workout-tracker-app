@@ -37,5 +37,17 @@ const foodIntake = (state = [], action) => {
         return userFoodIntake
   }
 }
+
+const exerciseEntry = (state = [], action) => {
+  switch(action.type) {
+    case 'ADD_EXERCISEENTRY':
+      return [...state, action.value];
+      case 'REMOVE_EXERCISEENTRY':
+        const userExercise = [...state]
+        userExercise.splice(action.value, 1)
+      default:
+        return userExercise
+  }
+}
   
-  export default combineReducers({ user, calorieIntake })
+  export default combineReducers({ user, calorieIntake, foodIntake, exerciseEntry })

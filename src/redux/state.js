@@ -1,5 +1,7 @@
 const state = {
-    user: {},
+    user: { 
+      username: "example-user",
+      password: ""},
     calorieIntake: [],
     foodIntake: [],
     exerciseEntry: [],
