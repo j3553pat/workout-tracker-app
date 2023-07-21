@@ -7,7 +7,21 @@ export const updateUser = (user) => {
 
 export const trackCalories = (calorieIntake) => {
     return {
-        type: "TRACK_ CALORIES",
+        type: "TRACK_CALORIES",
         value: calorieIntake
+    }
+}
+
+export const trackFoodIntake = (foodIntake) => {
+    return {
+        type: "TRACK_FOODINTAKE",
+        value: foodIntake
+    }
+}
+
+export const trackExercises = (exercise) => {
+    return {
+        type: "TRACK_EXERCISES",
+        value: exercise
     }
 }

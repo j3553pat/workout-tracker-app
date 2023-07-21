@@ -28,7 +28,7 @@ import cookie from 'cookie'
 
   return (
     <Routes>
-      <Route path='/calorieintake' element={<CalorieIntake />} />
+      <ProtectedRoute><Route path='/calorieintake' element={<CalorieIntake />} /></ProtectedRoute>
       <Route path='/bmi' element={<BMI />} />
       <Route path='/home' element={<Home />} />
       <Route path ='/exerciseentry' element={<ExerciseEntry />} />
