@@ -32,7 +32,7 @@ import cookie from 'cookie'
       <Route path='/bmi' element={<ProtectedRoute component={BMI} />}></Route>
       <Route path ='/exerciseentry' element={<ProtectedRoute component={ExerciseEntry} />} />
       <Route path='/login' element={<Login/>} />
-      <Route path='/home' element={<Home />} />
+      <Route path='/' element={<Home />} />
       <Route path='/test' element={<Test/>} />
     </Routes>
   )

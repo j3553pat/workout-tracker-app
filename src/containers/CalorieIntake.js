@@ -2,8 +2,11 @@ import { connect } from "react-redux"
 import CalorieIntake from "../components/CalorieIntake"
 import { trackCalories } from "../redux/actions"
 
-const mapStateToProps = () => {
-    
+const mapStateToProps = (state) => {
+    return {
+        calories: state.calories,
+        user: state.user
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -13,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(CalorieIntake)
+export default connect(mapStateToProps, mapDispatchToProps)(CalorieIntake)

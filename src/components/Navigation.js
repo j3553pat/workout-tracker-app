@@ -21,7 +21,16 @@ const Navigation = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="nav-list-item">
-              <Link to="/about">BMI</Link>
+              <Link to="/bmi">BMI</Link>
+            </li>
+            <li className='nav-list-item'>
+              <Link to="/exerciseentry">Enter Your Exercise</Link>
+            </li>
+            <li className='nav-list-item'>
+              <Link to="/foodintake">Record Your Food</Link>
+            </li>
+            <li className='nav-list-item'>
+              <Link to="calorieintake">Record Your Calories</Link>
             </li>
             <li
               className="nav-list-item"

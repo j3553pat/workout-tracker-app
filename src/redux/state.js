@@ -2,9 +2,9 @@ const state = {
     user: { 
       username: "example-user",
       password: ""},
-    calorieIntake: [],
-    foodIntake: [],
-    exerciseEntry: [],
+    calories: [],
+    foodlist: [],
+    exercise: [],
   }
   
   export default state;

@@ -2,8 +2,11 @@ import { connect } from "react-redux"
 import ExerciseEntry from "../components/ExerciseEntry"
 import { trackExercises } from "../redux/actions"
 
-const mapStateToProps = () => {
-    
+const mapStateToProps = (state) => {
+    return {
+        exercise: state.exercise,
+        user: state.user
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -13,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(ExerciseEntry)
+export default connect(mapStateToProps, mapDispatchToProps)(ExerciseEntry)

@@ -33,6 +33,7 @@ const foodIntake = (state = [], action) => {
       case 'REMOVE_FOODINTAKE':
         const userFoodIntake = [...state]
         userFoodIntake.splice(action.value, 1)
+        break
       default: 
         return userFoodIntake
   }
@@ -45,6 +46,7 @@ const exerciseEntry = (state = [], action) => {
       case 'REMOVE_EXERCISEENTRY':
         const userExercise = [...state]
         userExercise.splice(action.value, 1)
+        break
       default:
         return userExercise
   }
