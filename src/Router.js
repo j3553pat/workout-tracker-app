@@ -28,11 +28,11 @@ import cookie from 'cookie'
 
   return (
     <Routes>
-      <ProtectedRoute><Route path='/calorieintake' element={<CalorieIntake />} /></ProtectedRoute>
-      <Route path='/bmi' element={<BMI />} />
-      <Route path='/home' element={<Home />} />
-      <Route path ='/exerciseentry' element={<ExerciseEntry />} />
+      <Route path='/calorieintake' element={<ProtectedRoute component={CalorieIntake} />}></Route>
+      <Route path='/bmi' element={<ProtectedRoute component={BMI} />}></Route>
+      <Route path ='/exerciseentry' element={<ProtectedRoute component={ExerciseEntry} />} />
       <Route path='/login' element={<Login/>} />
+      <Route path='/home' element={<Home />} />
       <Route path='/test' element={<Test/>} />
     </Routes>
   )
