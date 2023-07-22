@@ -8,6 +8,7 @@ import ExerciseEntry from './components/ExerciseEntry';
 import  Navigate  from './components/Navigation';
 import Test from './components/test';
 import cookie from 'cookie'
+import { SignpostOutlined } from '@mui/icons-material';
 
  export default function Router() {
 
@@ -32,6 +33,7 @@ import cookie from 'cookie'
       <Route path='/bmi' element={<ProtectedRoute component={BMI} />}></Route>
       <Route path ='/exerciseentry' element={<ProtectedRoute component={ExerciseEntry} />} />
       <Route path='/login' element={<Login/>} />
+      <Route path='/signup' element={<Signup/>} />
       <Route path='/' element={<Home />} />
       <Route path='/test' element={<Test/>} />
     </Routes>

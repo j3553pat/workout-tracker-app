@@ -64,6 +64,9 @@ const Login = () => {
             Login
           </Button>
         </form>
+      <p>Create an Account{" "}
+        <Link to="/signup"> Signup</Link>
+      </p>
       </Container>
       </AppBar>
     </div>
