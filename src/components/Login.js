@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { TextField, Button, Container, AppBar } from "@mui/material";
 import cookie from "cookie";
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -64,9 +65,9 @@ const Login = () => {
             Login
           </Button>
         </form>
-      <p>Create an Account{" "}
+      <Button vairant="contained" color="secondary"> Create an Account{" "}
         <Link to="/signup"> Signup</Link>
-      </p>
+      </Button>
       </Container>
       </AppBar>
     </div>
