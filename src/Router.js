@@ -1,11 +1,11 @@
 import React from 'react';
-import { Routes, Route } from 'react-router';
+import { Routes, Route, Navigate } from 'react-router';
 import BMI from './components/BMI';
 import Login from './components/Login';
 import Home from './components/Home'
-import CalorieIntake from './components/CalorieIntake';
-import ExerciseEntry from './components/ExerciseEntry';
-import  Navigate  from './components/Navigation';
+import CalorieIntake from './containers/CalorieIntake';
+import ExerciseEntry from './containers/ExerciseEntry';
+import FoodIntake from './containers/FoodIntake'
 import Test from './components/test';
 import cookie from 'cookie'
 import SignUp from './components/SignUp';
@@ -29,9 +29,10 @@ import SignUp from './components/SignUp';
 
   return (
     <Routes>
-      <Route path='/calorieintake' element={<ProtectedRoute component={CalorieIntake} />}></Route>
-      <Route path='/bmi' element={<ProtectedRoute component={BMI} />}></Route>
+      {/* <Route path='/calorieintake' element={<ProtectedRoute component={CalorieIntake} />} /> */}
+      <Route path='/bmi' element={<ProtectedRoute component={BMI} />} />
       <Route path ='/exerciseentry' element={<ProtectedRoute component={ExerciseEntry} />} />
+      <Route path ='/foodintake' element={<ProtectedRoute component={FoodIntake} />} />
       <Route path='/login' element={<Login/>} />
       <Route path='/signup' element={<SignUp/>} />
       <Route path='/' element={<Home />} />

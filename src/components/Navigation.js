@@ -30,7 +30,7 @@ const Navigation = () => {
               <Link to="/foodintake">Record Your Food</Link>
             </li>
             <li className='nav-list-item'>
-              <Link to="calorieintake">Record Your Calories</Link>
+              <Link to="/calorieintake">Record Your Calories</Link>
             </li>
             <li
               className="nav-list-item"

@@ -2,9 +2,9 @@ import { connect } from "react-redux"
 import FoodIntake from "../components/FoodIntake"
 import { trackFoodIntake } from "../redux/actions"
 
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
     return {
-        exercise: state.exercise,
+        foodIntake: state.foodIntake,
         user: state.user
     }
 }

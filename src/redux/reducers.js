@@ -35,7 +35,7 @@ const foodIntake = (state = [], action) => {
         userFoodIntake.splice(action.value, 1)
         break
       default: 
-        return userFoodIntake
+        return state
   }
 }
 
@@ -48,7 +48,7 @@ const exerciseEntry = (state = [], action) => {
         userExercise.splice(action.value, 1)
         break
       default:
-        return userExercise
+        return state
   }
 }
   
