@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
     let cookies = {};
     document.cookie = cookie.serialize("loggedIn", "true", {
-      maxAge: 60 * 1,
+      maxAge: 200 * 1,
     });
     navigate("/login");
   };
