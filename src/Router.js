@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router';
-import BMI from './components/BMI';
+// import BMI from './components/BMI';
 import Login from './components/Login';
 import Home from './components/Home'
 import CalorieIntake from './containers/CalorieIntake';
@@ -30,7 +30,7 @@ import SignUp from './components/SignUp';
   return (
     <Routes>
       {/* <Route path='/calorieintake' element={<ProtectedRoute component={CalorieIntake} />} /> */}
-      <Route path='/bmi' element={<ProtectedRoute component={BMI} />} />
+      {/* <Route path='/bmi' element={<ProtectedRoute component={BMI} />} /> */}
       <Route path ='/exerciseentry' element={<ProtectedRoute component={ExerciseEntry} />} />
       <Route path ='/foodintake' element={<ProtectedRoute component={FoodIntake} />} />
       <Route path='/login' element={<Login/>} />

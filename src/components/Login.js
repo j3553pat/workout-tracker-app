@@ -8,8 +8,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   const [state, setState] = useState({
-    username: "",
-    password: "",
+    email: "",
+    first_name: "",
   });
 
   const handleTextChange = (e) => {
@@ -28,7 +28,8 @@ const Login = () => {
     document.cookie = cookie.serialize("loggedIn", "true", {
       maxAge: 200 * 1,
     });
-    navigate("/login");
+    navigate("/foodintake");
+    console.log("Logged In")
   };
 
   return (
@@ -39,9 +40,9 @@ const Login = () => {
           <TextField
             required
             onChange={handleTextChange}
-            value={state.username}
-            name="username"
-            label="Username"
+            value={state.email}
+            name="email"
+            label="email"
             type="text"
             variant="standard"
           />
@@ -49,10 +50,10 @@ const Login = () => {
           <TextField
             required
             onChange={handleTextChange}
-            value={state.password}
-            name="password"
-            label="Password"
-            type="password"
+            value={state.first_name}
+            name="first_name"
+            label="first name:"
+            type="text"
             variant="standard"
           />
           <br></br>

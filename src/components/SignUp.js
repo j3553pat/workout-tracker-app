@@ -4,9 +4,10 @@ import { Container, Button } from '@mui/material'
 
 const SignUp = ({ setSignedUp }) => {
   const [formData, setFormData] = useState({
-    username: "",
+    first_name: "",
+    last_name: "",
     email: "",
-    password: "",
+     WT: 0
   });
 
   const handleChange = (e) => {
@@ -19,22 +20,33 @@ const SignUp = ({ setSignedUp }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/signup", formData).then(() => {
+    axios.post("http://localhost:4000/auth/signup", formData).then(() => {
       setSignedUp(true);
+      console.log("it works!")
     });
   };
 
   return (
-    <div>
+    <div className="SignUp">
       <Container>
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="first_name">First name:</label>
           <input
             type="text"
-            name="username"
-            value={formData.username}
+            name="first_name"
+            value={formData.first_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="last_name">Last name:</label>
+          <input
+            type="text"
+            name="last_name"
+            value={formData.last_name}
             onChange={handleChange}
             required
           />
@@ -50,11 +62,11 @@ const SignUp = ({ setSignedUp }) => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="WT">WT:</label>
           <input
-            type="password"
-            name="password"
-            value={formData.password}
+            type="number"
+            name="WT"
+            value={formData.WT}
             onChange={handleChange}
             required
           />
