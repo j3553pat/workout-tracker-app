@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(203, 219, 214);
+    border-color: black;
+}
+
+.login-form { 
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.login-button {
+    margin: 20px;
+}
+
+.create-acc {
+    display: flex;
+    justify-content: center;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.signup-btn {
+    font-size: 20px;
+    margin: 4px;
+    background-color: rgb(175, 200, 241);
+    border: none;
+    border-radius: 5px;
+}

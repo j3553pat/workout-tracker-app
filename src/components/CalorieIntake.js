@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './CalorieIntake.css'
 
 const CalorieIntake = (props) => {
   console.log(props)
@@ -6,13 +7,13 @@ const CalorieIntake = (props) => {
   const [calorieGained, setCalorieGained] = useState("");
   const [calorieTDEE, setCalorieTDEE] = useState("");
 
-  const handleSubmit = () => {};
+  
 
   return (
     <div className="App">
       <h1>Calorie Intake Tracker</h1>
       <form>
-        <div>
+        <div className="calories">
           <label>Calorie Burned:</label>
           <input
             type="number"
@@ -20,33 +21,29 @@ const CalorieIntake = (props) => {
             onChange={(e) => setCalorieBurned(e.target.value)}
           />
         </div>
-        <div>
-          <label>calorie TDEE:</label>
+        <div className="calories">
+          <label>Calorie TDEE:</label>
           <input
             type="number"
             value={calorieTDEE}
             onChange={(e) => setCalorieTDEE(e.target.value)}
           />
         </div>
-        <div>
-          <label>calories Gained:</label>
+        <div className="calories">
+          <label>Calories Gained:</label>
           <input
             type="number"
             value={calorieGained}
             onChange={(e) => setCalorieGained(e.target.value)}
           />
         </div>
-        <button type="submit">Add Entry</button>
+        <button className= "log-button" type="submit">Add Entry</button>
       </form>
-      <div>
-        <h2>net calories</h2>
-        {/* <ul> */}
-        {/* {calorielist.map((entry, index) => (
-          <li key={index}>
-           Calories: {entry.calorieIntake}
-          </li>
-        ))} */}
-        {/* </ul> */}
+      <div className="Log">
+        <h2>Log</h2>
+         <ul>
+
+         </ul>
       </div>
     </div>
   );

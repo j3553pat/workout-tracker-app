@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-export const BMIcalc = () => {
-    const [height, setHeight] = useState("");
-    const [weight, setWeight] = useState("");
+ const BMIcalc = () => {
 
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+
+  const heightNum = parseInt(height);
+  const weightNum = parseInt(weight);
+  
     const handleChange = (e) => {
         const { name, value } = e.target;
         if (name === "height") {
@@ -16,8 +20,7 @@ export const BMIcalc = () => {
 
       const calculateBMI = (e) => {
         e.preventDefault();
-        const heightNum = parseFloat(height);
-        const weightNum = parseFloat(weight);
+
         if (isNaN(heightNum) || isNaN(weightNum) || heightNum <= 0 || weightNum <= 0) {
           alert("Please enter valid height and weight values.");
           return;
@@ -57,7 +60,7 @@ export const BMIcalc = () => {
     </div>
   )
 }
-
+export default BMIcalc
 // const options = {
 //   method: 'GET',
 //   url: 'https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial',

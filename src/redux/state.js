@@ -1,7 +1,7 @@
 const state = {
     user: { 
-      username: "example-user",
-      password: ""},
+      email: "",
+      first_name: ""},
     calorieIntake: [],
     foodIntake: [],
     exerciseEntry: [],

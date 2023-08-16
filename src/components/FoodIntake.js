@@ -1,20 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function FoodIntake(props) {
 console.log(props)
-  // const [foodIntake, setFoodIntake] = useState('');
-  // const [date, setDate] = useState('');
+  const [foodIntake, setFoodIntake] = useState('');
+  const [date, setDate] = useState('');
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('Food Intake:', foodIntake);
-  //   console.log('Date:', date);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Food Intake:', foodIntake);
+    console.log('Date:', date);
+  };
 
   return (
     <div className="App">
     <h1>Food Intake Tracker</h1>
-    {/* <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div>
         <label>Food Intake Entry:</label>
         <input
@@ -32,7 +32,7 @@ console.log(props)
         />
       </div>
       <button type="submit">Submit</button>
-    </form> */}
+    </form>
   </div>
   )
 }

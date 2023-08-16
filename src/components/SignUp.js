@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Container, Button } from '@mui/material'
+import { Button } from '@mui/material'
 
 const SignUp = ({ setSignedUp }) => {
   const [formData, setFormData] = useState({
@@ -28,7 +28,6 @@ const SignUp = ({ setSignedUp }) => {
 
   return (
     <div className="SignUp">
-      <Container>
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -73,7 +72,6 @@ const SignUp = ({ setSignedUp }) => {
         </div>
         <Button variant="contained" color="success" type="submit">Sign Up</Button>
       </form>
-      </Container>
     </div>
   );
 };
