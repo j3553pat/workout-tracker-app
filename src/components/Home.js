@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -15,13 +16,11 @@ function Home() {
         </Link>
       </section>
       <section>
-        <Link to="/progress" className="cta-button">
-          View Progress
+        <Link to="/foodintake" className="cta-button">
+          Track Your Food Intake
         </Link>
       </section>
       <section>
-        <h2>Stay Motivated</h2>
-        <p>Get personalized workout recommendations and set achievable goals.</p>
         <Link to="/goals" className="cta-button">
           Set Goals
         </Link>

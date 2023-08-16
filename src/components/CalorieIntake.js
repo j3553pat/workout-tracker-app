@@ -1,45 +1,55 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function CalorieIntake() {
+const CalorieIntake = (props) => {
+  console.log(props)
+  const [calorieBurned, setCalorieBurned] = useState("");
+  const [calorieGained, setCalorieGained] = useState("");
+  const [calorieTDEE, setCalorieTDEE] = useState("");
 
-  const [calorieIntake, setCalorieIntake] = useState('');
-
-
+  const handleSubmit = () => {};
 
   return (
     <div className="App">
-    <h1>Calorie Intake Tracker</h1>
-    <form onSubmit={handleSubmit}>
+      <h1>Calorie Intake Tracker</h1>
+      <form>
+        <div>
+          <label>Calorie Burned:</label>
+          <input
+            type="number"
+            value={calorieBurned}
+            onChange={(e) => setCalorieBurned(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>calorie TDEE:</label>
+          <input
+            type="number"
+            value={calorieTDEE}
+            onChange={(e) => setCalorieTDEE(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>calories Gained:</label>
+          <input
+            type="number"
+            value={calorieGained}
+            onChange={(e) => setCalorieGained(e.target.value)}
+          />
+        </div>
+        <button type="submit">Add Entry</button>
+      </form>
       <div>
-        <label>Calorie Intake:</label>
-        <input
-          type="number"
-          value={calorieIntake}
-          onChange={(e) => setCalorieIntake(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Date:</label>
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
-      </div>
-      <button type="submit">Add Entry</button>
-    </form>
-    <div>
-      <h2>Calories Intake List</h2>
-      <ul>
-        {caloriesList.map((entry, index) => (
+        <h2>net calories</h2>
+        {/* <ul> */}
+        {/* {calorielist.map((entry, index) => (
           <li key={index}>
-            Date: {entry.date}, Calories: {entry.calorieIntake}
+           Calories: {entry.calorieIntake}
           </li>
-        ))}
-      </ul>
+        ))} */}
+        {/* </ul> */}
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default CalorieIntake
+export default CalorieIntake;

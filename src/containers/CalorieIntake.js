@@ -4,7 +4,7 @@ import { trackCalories } from "../redux/actions"
 
 const mapStateToProps = (state) => {
     return {
-        calories: state.calories,
+        trackCalories: state.trackCalories,
         user: state.user
     }
 }

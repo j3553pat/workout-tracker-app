@@ -4,7 +4,7 @@ import { trackExercises } from "../redux/actions"
 
 const mapStateToProps = (state) => {
     return {
-        exercise: state.exercise,
+        trackExercises: state.trackExercises,
         user: state.user
     }
 }

@@ -10,7 +10,7 @@ import Test from './components/test';
 import cookie from 'cookie'
 import SignUp from './components/SignUp';
 
- export default function Router() {
+
 
     const checkAuth = () => {
         const cookies = cookie.parse(document.cookie);
@@ -26,13 +26,13 @@ import SignUp from './components/SignUp';
           <Navigate to="/login" />
         );
       };
-
+      function Router() {
   return (
     <Routes>
-      {/* <Route path='/calorieintake' element={<ProtectedRoute component={CalorieIntake} />} /> */}
+      <Route path='/calorieintake' element={<CalorieIntake />} />
       {/* <Route path='/bmi' element={<ProtectedRoute component={BMI} />} /> */}
-      <Route path ='/exerciseentry' element={<ProtectedRoute component={ExerciseEntry} />} />
-      <Route path ='/foodintake' element={<ProtectedRoute component={FoodIntake} />} />
+      <Route path ='/exerciseentry' element={<ExerciseEntry/>}  />
+      <Route path ='/foodintake' element={<FoodIntake/>}  />
       <Route path='/login' element={<Login/>} />
       <Route path='/signup' element={<SignUp/>} />
       <Route path='/' element={<Home />} />
@@ -41,3 +41,4 @@ import SignUp from './components/SignUp';
   )
 };
 
+export default Router

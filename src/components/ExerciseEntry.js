@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const ExerciseEntry = () => {
+const ExerciseEntry = (props) => {
+  console.log(props)
   const [exerciseName, setExerciseName] = useState('');
   const [minutes, setMinutes] = useState(0);
   const [reps, setReps] = useState(0);

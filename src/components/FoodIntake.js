@@ -1,7 +1,7 @@
 import React from 'react'
 
-function FoodIntake() {
-
+function FoodIntake(props) {
+console.log(props)
   // const [foodIntake, setFoodIntake] = useState('');
   // const [date, setDate] = useState('');
 
