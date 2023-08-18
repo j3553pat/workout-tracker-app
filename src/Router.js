@@ -9,6 +9,7 @@ import FoodIntake from './containers/FoodIntake'
 import Test from './components/test';
 import cookie from 'cookie'
 import SignUp from './components/SignUp';
+import ExerciseAPI from './components/ExerciseAPI';
 
 
 
@@ -36,7 +37,8 @@ import SignUp from './components/SignUp';
       <Route path='/login' element={<Login/>} />
       <Route path='/signup' element={<SignUp/>} />
       <Route path='/' element={<Home />} />
-      <Route path='/test' element={<Test/>} />
+      {/* <Route path='/test' element={<Test/>} /> */}
+      <Route path='/exerciseapi' element={<ExerciseAPI />} />
     </Routes>
   )
 };

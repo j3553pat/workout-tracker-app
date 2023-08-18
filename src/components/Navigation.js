@@ -41,7 +41,7 @@ const Navigation = () => {
                 navigate("/login");
               }}
             >
-              Logout
+              <Link to="login" >Logout</Link>
             </li>
           </ul>
         </Toolbar>

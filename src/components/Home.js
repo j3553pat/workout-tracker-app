@@ -21,8 +21,13 @@ function Home() {
         </Link>
       </section>
       <section>
-        <Link to="/goals" className="cta-button">
-          Set Goals
+        <Link to="/exerciseentry" className="cta-button">
+          Record Your Workouts!
+        </Link>
+      </section>
+      <section>
+        <Link to="calorieintake" className='cta-button'>
+        Record Your Calorie Intake!
         </Link>
       </section>
     </main>

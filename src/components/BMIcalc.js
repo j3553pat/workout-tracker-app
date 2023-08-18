@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 
  const BMIcalc = () => {
 
+
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-
+  const [bmi, setBmi] = useState(0)
   const heightNum = parseInt(height);
   const weightNum = parseInt(weight);
+
+  
   
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,14 +22,19 @@ import axios from 'axios'
 
       const calculateBMI = (e) => {
         e.preventDefault();
+        console.log('first function bmi:', bmi)
 
         if (isNaN(heightNum) || isNaN(weightNum) || heightNum <= 0 || weightNum <= 0) {
           alert("Please enter valid height and weight values.");
           return;
+        } else {
+          let bmiCalc = (weightNum / (heightNum * heightNum)).toFixed(2)
+          console.log('calculated bmi:', bmi)
+          setBmi(bmiCalc)
+          // return bmi
         }
       }
 
-      const bmi = (weightNum / (heightNum * heightNum)).toFixed(2)
 
   return (
     <div>
@@ -57,25 +64,12 @@ import axios from 'axios'
         </div>
         <button type="submit">Calculate BMI</button>
       </form>
+      {
+        bmi > 0 ? <div className='results'>{bmi}</div> : null
+      }
+      {/* <div className='results'>{bmi}</div> */}
     </div>
   )
 }
 export default BMIcalc
-// const options = {
-//   method: 'GET',
-//   url: 'https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial',
-//   params: {
-//     weight: '210',
-//     height: '71'
-//   },
-//   headers: {
-//     'X-RapidAPI-Key': 'ee5a17c0e8msh3e890c40e1d0415p18139bjsnef5537eecd68',
-//     'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com'
-//   }
-// };
 
-// try {
-//     const response = await axios.request(options);
-//     console.log(response.data);
-// } catch (error) {
-//     console.error(error);

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const ExerciseEntry = (props) => {
   console.log(props)
@@ -36,6 +37,8 @@ const ExerciseEntry = (props) => {
   };
 
   return (
+  <div>
+    <Link to="/exerciseapi">Don't know any exercises? Here is this Link to help you out!</Link>
     <form onSubmit={handleSubmit}>
       <label>
         Exercise Name:
@@ -55,6 +58,7 @@ const ExerciseEntry = (props) => {
       </label>
       <button type="submit">Submit</button>
     </form>
+    </div>
   );
 };
 

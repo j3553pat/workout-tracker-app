@@ -6,8 +6,8 @@ const CalorieIntake = (props) => {
   const [calorieBurned, setCalorieBurned] = useState("");
   const [calorieGained, setCalorieGained] = useState("");
   const [calorieTDEE, setCalorieTDEE] = useState("");
-
-  
+  const [toggle, setToggle] = useState(false)
+console.log(toggle)
 
   return (
     <div className="App">
@@ -37,13 +37,25 @@ const CalorieIntake = (props) => {
             onChange={(e) => setCalorieGained(e.target.value)}
           />
         </div>
-        <button className= "log-button" type="submit">Add Entry</button>
+        <button className= "log-button" type="button" onClick={(e) => {e.preventDefault(); setToggle(true);} }>Add Entry</button>
       </form>
       <div className="Log">
         <h2>Log</h2>
-         <ul>
-
+        {
+          toggle && 
+          <ul>
+          <li>
+            Calories Burned: {calorieBurned}
+          </li> 
+          <li>
+            Calories Gained: {calorieGained}
+          </li>
+          <li>
+            Daily Expenditure: {calorieTDEE}
+          </li>
          </ul>
+        }
+
       </div>
     </div>
   );
