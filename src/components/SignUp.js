@@ -20,7 +20,7 @@ const SignUp = ({ setSignedUp }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("https://main--joyful-cactus-17299f.netlify.app//auth/signup", formData).then(() => {
+    axios.post("https://main--joyful-cactus-17299f.netlify.app/auth/signup", formData).then(() => {
       setSignedUp(true);
       console.log("it works!")
     });
