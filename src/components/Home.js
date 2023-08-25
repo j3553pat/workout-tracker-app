@@ -7,6 +7,7 @@ function Home() {
     <header>
       <h1>Workout Tracker App</h1>
     </header>
+    <center>
     <main>
       <section>
         <h2>Track Your Workouts</h2>
@@ -33,7 +34,7 @@ function Home() {
     </main>
     <footer>
       <p>&copy; 2023 Workout Tracker App. All rights reserved.</p>
-    </footer>
+    </footer></center>
   </div>
   )
 }

@@ -1,12 +1,8 @@
 import React,  { useState, useEffect }  from 'react'
-// const axios = require('axios');
 import axios from 'axios'
 
-
-
+function ExerciseAPI(props) {
   
-
-function ExerciseAPI() {
 
   const [exercises, setExercises] = useState([])
 
@@ -33,7 +29,30 @@ function ExerciseAPI() {
     fetchData()
   }, [])
   return (
-    <div>{exercises}</div>
+    <div>
+      <h1>Exercises</h1>
+      <center>
+      {exercises.map((exercise,index) => {
+        return(
+          <div
+          style={{
+            backgroundColor: "#35D841",
+            padding: 2,
+            borderRadius: 10,
+            marginBlock: 10,
+          }}
+        >
+          <p style={{ fontSize: 15, color: 'white' }}>{exercise.name}
+          <br />
+          <br /> {exercise.equipment}
+          <br />
+          <br /> {exercise.type}
+          <br />
+          <br /> {exercise.instructions}</p>
+        </div>
+        )
+      })}</center>
+      </div>
   )
 }
 
